@@ -1,0 +1,14 @@
+1. Build the root CA Server
+2. Build the intermediate CA Server and sign with root CA
+3. Build the network object
+4. Build the server with its CA
+5. From the server sign a certificate with the intermediate CA 
+6. Create client object with root CA Cetificate
+7. Call server from client
+8. From server return the certificate with the client along with intermediate public key. Do we need to sign it whole with root CA private key on top of it ? 
+9. From client decrypt the certificate using root CA public key 
+10. send a message to network object by encrypting with server public key 
+11. decrypt the message at server end with server private key 
+
+FAQs:
+1. What is CSR ? 
